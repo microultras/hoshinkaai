@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هوشینکا</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-3 bg-light p-3">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2>تاریخچه</h2>
+                    <button id="dark-mode-toggle" class="btn btn-secondary"><i class="fas fa-sun"></i></button>
+                    <button id="help-button" class="btn btn-secondary"><i class="fas fa-question"></i></button>
+                </div>
+                <ul id="history-list" class="list-unstyled"></ul>
+                <button id="new-chat-button" class="btn btn-primary">چت جدید</button>
+            </aside>
+            <main class="col-md-9 p-3 d-flex flex-column align-items-center">
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-robot fa-3x" style="margin-left: 10px;"></i>
+                    <h1>هوشینکا</h1>
+                </div>
+                <div id="chat-area" style="flex: 1; width: 100%;">
+                    <div class="suggested-prompts">
+                        <div class="prompt-card">
+                            <h3>نوشتن خلاقانه</h3>
+                            <p>جرقه بزنید به تخیل خود</p>
+                            <p>یک داستان کوتاه درباره یک مسافر زمان بنویسید که به طور تصادفی تاریخ را تغییر می دهد.</p>
+                        </div>
+                        <div class="prompt-card">
+                            <h3>حل مسئله</h3>
+                            <p>با یک چالش مقابله کنید</p>
+                            <p>چگونه سیستمی را برای کاهش ترافیک در یک شهر شلوغ طراحی می کنید؟</p>
+                        </div>
+                        <div class="prompt-card">
+                            <h3>یادگیری</h3>
+                            <p>دانش خود را گسترش دهید</p>
+                            <p>مفهوم درهم تنیدگی کوانتومی را به زبان ساده توضیح دهید.</p>
+                        </div>
+                        <div class="prompt-card">
+                            <h3>طوفان فکری</h3>
+                            <p>ایده های جدید تولید کنید</p>
+                            <p>5 ویژگی نوآورانه برای یک دستگاه هوشمند خانگی در آینده را فهرست کنید.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group" style="width: 80%;">
+                    <input type="text" id="message-input" class="form-control" placeholder="پیام خود را تایپ کنید...">
+                    <div class="input-group-append">
+                        <button id="send-button" class="btn btn-primary" style="margin:0;height:64px;">ارسال</button>
+                        <button id="stop-button" class="btn btn-danger" style="margin:0;height:64px;">توقف</button>
+                    </div>
+                </div>
+                <div class="input-group" style="width: 80%; margin-bottom: 10px;">
+                    <input type="text" id="role-input" class="form-control" placeholder="نقش خود را وارد کنید...">
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="notification" class="notification">
+        <p id="notification-text"></p>
+        <button id="close-notification" class="btn btn-secondary">بستن</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
